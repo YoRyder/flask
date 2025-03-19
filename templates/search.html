@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h2>Search Boats</h2>
+    <form action="/search" method="POST">
+        <input type="text" name="search_query" placeholder="Enter boat name or type" required>
+        <input type="submit" value="Search">
+    </form>
+
+    {% if results is not none %}
+        <h3>Search Results for "{{ query }}"</h3>
+        {% if results %}
+            <ul>
+                {% for boat in results %}
+                    <li>{{ boat[1] }} ({{ boat[2] }}) - Owner ID: {{ boat[3] }}, Rental Price: ${{ boat[4] }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    {% endif %}
+{% endblock %}
