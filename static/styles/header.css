@@ -14,7 +14,7 @@
   }
   
   .topBar{
-    background-color: tan;
+    background-color: rgb(121, 121, 247);
     display:flex;
     justify-content: space-between;
     align-items:center;
@@ -64,7 +64,7 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     font-size: 14px;
-    background-color: tan;
+    background-color: rgb(121, 121, 247);
     align-items: start;
     min-height: 100vh;
   }
@@ -75,7 +75,7 @@
     padding: 30px 30px 20px 30px;
     color: #2f2f2f;
     background-color: tan;
-    border-top: 1px solid black;
+    border-top: 2px solid black;
   }
   
   .footer > * {
